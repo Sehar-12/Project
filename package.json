@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon backend/index.js",
-    "build": "npm instal && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npx nodemon backend/index.js"
+    "dev": "npm install -g nodemon && npx nodemon backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm install -g nodemon && npx nodemon backend/index.js"
   },
   "repository": {
     "type": "git",
