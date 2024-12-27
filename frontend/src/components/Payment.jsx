@@ -84,7 +84,7 @@ function Payment() {
       <div className="w-full max-w-lg p-10 bg-white rounded-xl shadow-lg shadow-indigo-500/40 space-y-8">
         <h2 className="text-4xl font-semibold text-center text-gray-800">Confirm Your Payment</h2>
         <p className="text-center text-gray-600 text-xl">
-          Total amount: <strong className="text-black text-2xl">₹{calculateTotalPrice()}</strong>
+          Total amount: <strong className="text-black text-2xl">${calculateTotalPrice()}</strong>
         </p>
 
         {/* Payment Method Selection */}
@@ -213,7 +213,7 @@ function Payment() {
             disabled={isSubmitting || isPaymentComplete}
             className="w-full py-3 font-semibold text-lg text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-md shadow-md hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 disabled:bg-gray-400"
           >
-            {isSubmitting ? 'Processing...' : isPaymentComplete ? 'Payment Complete' : `Pay ₹${calculateTotalPrice()}`}
+            {isSubmitting ? 'Processing...' : isPaymentComplete ? 'Payment Complete' : `Pay $${calculateTotalPrice()}`}
           </button>
         </div>
 

@@ -11,7 +11,7 @@ import userRoute from './route/user.route.js';
 
 dotenv.config();
 const app = express();
-
+const _dirname=path.resolve()
 // Get current directory using fileURLToPath and import.meta.url
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);  // Now we can use __dirname
@@ -40,7 +40,10 @@ mongoose.connect(URI, {
 // Set up routes
 app.use('/book', bookRoute);
 app.use('/user', userRoute);
-
+app.use(express.static(path.join(_dirname,"/frontend/dist")))
+app.get('*',(_,res)=>{
+    res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
+})
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
