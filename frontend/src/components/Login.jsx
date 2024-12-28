@@ -25,7 +25,7 @@ function Login() {
     };
 
     try {
-      const res = await axios.post('http://localhost:4002/user/login', userInfo);
+      const res = await axios.post('http://project-3qmh.onrender.com/user/login', userInfo);
       if (res.data) {
         toast.success('Login successful');
         localStorage.setItem('Users', JSON.stringify(res.data.user));

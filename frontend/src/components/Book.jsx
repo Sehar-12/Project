@@ -8,7 +8,7 @@ function Books({ searchTerm }) {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:4002/book");
+        const res = await axios.get("https://project-3qmh.onrender.com/book");
         console.log(res.data);
         setBook(res.data);
       } catch (error) {

@@ -13,7 +13,7 @@ function Freebook() {
   useEffect(() => {
     const getBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:4002/book");
+        const res = await axios.get("https://project-3qmh.onrender.com/book");
         setBooks(res.data);  // Store all books
       } catch (error) {
         console.error("Error fetching books:", error);
