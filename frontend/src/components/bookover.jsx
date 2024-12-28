@@ -26,7 +26,7 @@ function BookOver() {
     useEffect(() => {
         const fetchBookDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:4001/book/${bookId}`);
+                const response = await fetch(`http://localhost:4002/book/${bookId}`);
                 if (!response.ok) throw new Error('Failed to fetch book details');
                 const data = await response.json();
                 setBook(data);

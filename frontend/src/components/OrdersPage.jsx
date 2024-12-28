@@ -14,7 +14,7 @@ function OrdersPage() {
     // Check if the pdfPath is defined
     if (pdfPath) {
       // Construct the full URL to the PDF
-      const pdfUrl = `http://localhost:4001${pdfPath}`;
+      const pdfUrl = `http://localhost:4002${pdfPath}`;
       
       // Open the PDF in a new tab
       window.open(pdfUrl, '_blank');
