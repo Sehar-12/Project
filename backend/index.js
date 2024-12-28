@@ -37,14 +37,6 @@ mongoose.connect(URI)
 app.use('/book', bookRoute);
 app.use('/user', userRoute);
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
-
-app.get('*', (_, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
-});
-
-
-
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something went wrong!');
