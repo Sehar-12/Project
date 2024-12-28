@@ -14,7 +14,7 @@ function OrdersPage() {
     // Check if the pdfPath is defined
     if (pdfPath) {
       // Construct the full URL to the PDF
-      const pdfUrl = `https://project-rh6i.onrender.com${pdfPath}`;
+      const pdfUrl = `https://project-1l2d.onrender.com${pdfPath}`;
       
       // Open the PDF in a new tab
       window.open(pdfUrl, '_blank');
